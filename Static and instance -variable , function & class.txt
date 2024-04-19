@@ -1,0 +1,32 @@
+public class Hello {
+    public static void main(String[] args)
+    {
+        Example ex1 = new Example();
+        System.out.println("x = "+ex1.x);
+        ex1.fun1();
+        System.out.println("x in fun1() = "+ex1.x);
+        Example.y=5;
+        System.out.println("y = "+Example.y);
+        Example.fun2();
+        System.out.println("y in fun2() = "+Example.y);
+        System.out.println(Example.Test.country);
+    }
+}
+class Example
+{
+    int x=20;                 //instance variable
+    static int y;         //static variable
+    public void fun1()    //instance function
+    {
+        x=10;
+    }
+    static public void fun2()  //static function
+    {
+        y=15;
+    }
+    
+    static class Test     //static class
+    {
+        public static String country = "INDIA";
+    }
+}
